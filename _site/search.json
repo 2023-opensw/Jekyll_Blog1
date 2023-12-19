@@ -1,15 +1,15 @@
 [
   
     {
-      "title"    : "Integrating razorpay into your webapp",
-      "title-lower"    : "integrating razorpay into your webapp",
+      "title"    : "OpenSourceSW Assignment &lt;TEAM 3&gt;",
+      "title-lower"    : "opensourcesw assignment &lt;team 3&gt;",
       "sub-titile" : "",
       "sub-titile-lower" : "",
-      "categories" : "JavascriptNodeJS",
+      "categories" : "OpensourceKubenetesJenkinsJekyllGiscus",
       "tags"     : "",
-      "url"      : "/javascript/nodejs/2019/03/24/welcome-to-jekyll.html",
-      "date"     : "2019-03-24 00:33:36 +0900",
-      "content"     : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ..."
+      "url"      : "/opensource/kubenetes/jenkins/jekyll/giscus/2023/12/19/welcome-to-jekyll.html",
+      "date"     : "2023-12-19 12:33:36 +0900",
+      "content"     : "Team Members권영훈, 김가을, 김나현, 정진서Jenkins Part (1p)  git event hooking (git push 되면 작동하도록)  젠킨스로 블로그 노드와 연결, 블로그 노드에서 git pull 할 수 있도록 설정Jekyll Blog Part (2p)  jekyll 템플릿 아무거나 써서, 우리 organization에 레포 추..."
     } 
   
 ]
