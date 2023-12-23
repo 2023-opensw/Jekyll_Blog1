@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: jekyll-create
+  namespace: jekyll
+spec:
+  template:
+    spec:
+      containers:
+      - name: jekyll-create-job
+        image: jekyll/jekyll:latest
+        volumeMounts:
+          - name: jekyll-volume
+            mountPath: /srv/jekyll
+        command: ["/bin/sh"]
+        args: ["-c", "jekyll new docs"]
+      restartPolicy: Never
+      volumes: 
+        - name: jekyll-volume
+          persistentVolumeClaim:
+            claimName: jekyll-pvc
+  backoffLimit: 1

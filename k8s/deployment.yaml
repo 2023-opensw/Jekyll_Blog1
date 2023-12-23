@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jekyll-preview
+  namespace: jekyll
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jekyll-preview
+  template:
+    metadata:
+      labels:
+        app: jekyll-preview  
+    spec:
+      containers:
+      - name: website
+        image: jekyll/jekyll:latest
+        ports:
+          - containerPort: 8080
+          - containerPort: 8081
+        volumeMounts:
+          - name: jekyll-volume
+            mountPath: /srv/jekyll
+        env:
+        - name: JEKYLL_ENV
+          value: "production"
+        command: ["/bin/sh"]
+        args: ["-c", "jekyll serve --trace --watch --force_polling --port 8080 --livereload --livereload-port 8081"]
+      volumes: 
+        - name: jekyll-volume
+          persistentVolumeClaim:
+            claimName: jekyll-pvc-2
